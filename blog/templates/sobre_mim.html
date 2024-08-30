@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}  <!-- Carregue a tag static -->
+
+{% block title %}Sobre mim{% endblock %}
+
+{% block content %}
+    <section class="mb-5">
+        <div class="card p-4">
+            <h2 class="card-title text-secondary" style="font-size: 2rem;">Biografia</h2>  <!-- Aumenta o tamanho da fonte -->
+            <div class="text-center">
+                <img src="{% static 'img/thicy.jpeg' %}" alt="Foto de Perfil" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover;">
+            </div>
+            <p class="card-text mt-4">{{ sobre.biografia }}</p>
+        </div>
+    </section>
+{% endblock %}

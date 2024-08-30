@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Interesses{% endblock %}
+
+{% block content %}
+    <section class="mb-5">
+        <div class="card p-4">
+            <h2 class="text-secondary">Interesses</h2>
+            <ul class="list-group">
+                {% for interesse in interesses %}
+                    <li class="list-group-item">
+                        <h4>{{ interesse.nome }}</h4>
+                        <p>{{ interesse.descricao }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}
